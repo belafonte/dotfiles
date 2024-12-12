@@ -1,0 +1,44 @@
+[user]
+    name = Jan Pistor
+    email = pistor.jan@gmail.com
+    signingkey = 14DE4433E3627350
+
+[core]
+    excludesfile = ~/.config/git/ignore
+    editor = nvim
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    theme = Solarized
+    light = true
+
+[merge]
+    ff = only
+    tool = opendiff
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[init]
+    defaultBranch = main
+
+[pull]
+    ff = only
+
+[credential]
+    helper = osxkeychain
+
+[alias]
+    surfi = "!git submodule update --recursive --force --init"
+    surf = "!git submodule update --recursive --force"
+    suri = "!git submodule update --recursive --init"
+    sur = "!git submodule update --recursive"
+    rohm = "!git reset --hard origin/master"
+
+[commit]
+    ; gpgSign = true
