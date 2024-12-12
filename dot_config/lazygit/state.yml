@@ -1,8 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/jpistor/.local/share/chezmoi
-    - /Users/jpistor/Documents/Code/leihs/admin
     - /Users/jpistor/.config/astronvim4
+    - /Users/jpistor/Documents/Code/leihs/admin
     - /Users/jpistor/Documents/Code/leihs/inventory
     - /Users/jpistor/Documents/Code/leihs
     - /Users/jpistor/Documents/Code/leihs/admin/shared-clj
@@ -40,11 +40,12 @@ recentrepos:
 startuppopupversion: 5
 lastversion: 0.43.1
 customcommandshistory:
+    - git merge --no-ff full-path-test
     - git surfi
+    - git sur
     - git rebase
     - git rebse
     - git fetch && git rebase origin/feat/admin-categories
-    - git sur
     - git su
     - git rohm
     - git cherry-pick ed9c4e609c4c
