@@ -2,14 +2,6 @@
 
 set -eufo pipefail
 
-echo "check if homebrew is already installed"
-# Check if Homebrew is installed, and install it if missing
-if ! command -v brew &> /dev/null; then
-    echo "Homebrew not found. Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
-
-
 echo "Installig Brew Packages"
 # install xcode cmd 
 xcode-select --install
