@@ -14,8 +14,8 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 export NPM_CONFIG_TMP=/tmp
 
-export $BITWARDEN_EMAIL="regproxy0+bitwarden@gmail.com"
-export BW_SESSION=$(bw login $BITWARDEN_EMAIL --raw)
+#export $BITWARDEN_EMAIL="pistor.jan@gmail.com"
+#export BW_SESSION=$(bw login $BITWARDEN_EMAIL --raw)
 
 eval $(/opt/homebrew/bin/brew shellenv)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
