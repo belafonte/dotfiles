@@ -1,5 +1,4 @@
 Include /Users/jpistor/.config/colima/ssh_config
-
 Include /Users/dreieinsvier/.config/colima/ssh_config
 
 Host *
@@ -7,6 +6,10 @@ Host *
 	AddKeysToAgent yes
 	IdentityFile ~/.ssh/id_rsa
 
+Host github.com
+  HostName github.com
+  User belafonte
+  IdentityFile ~/.ssh/id_rsa
 
 Host *.byod.zhdk.ch
   ProxyJump root@ci.zhdk.ch  
