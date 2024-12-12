@@ -3,8 +3,6 @@
 set -eufo pipefail
 
 echo "Installig Brew Packages"
-# install xcode cmd 
-xcode-select --install
 
 # Update any existing homebrew recipes
 brew update
@@ -18,6 +16,7 @@ brew install age
 brew install bottom
 brew install bat
 brew install btop
+brew install bitwarden-cli
 
 # C
 brew install curl
@@ -46,7 +45,6 @@ brew install gnupg
 brew install gnu-sed
 
 # K
-brew install karabiner
 
 # L
 brew install lazydocker
@@ -92,3 +90,4 @@ brew install zoxide
 # rustup-init
 
 bw config server https://vault.bitwarden.eu
+bw login
