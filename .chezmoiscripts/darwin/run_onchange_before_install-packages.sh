@@ -20,16 +20,21 @@ brew update
 # Install my brew packages
 # A
 brew install asdf
+brew install age
 
 # B
 brew install bottom
+brew install bat
+brew install btop
 
 # C
+brew install curl
 brew install clojure/tools/clojure
 brew install colima
 
 # D
 brew install docker
+brew install dockutil
 
 # E
 brew install eza
@@ -38,8 +43,10 @@ brew install eza
 brew install ffmpeg
 brew install fish
 brew install fzf
+brew install fd
 
 # G
+brew install gdu
 brew install gh
 brew install git
 brew install git-delta
@@ -62,7 +69,9 @@ brew install neovide
 brew install nvim
 
 # P
-brew install python
+# brew install python
+brew install postgresql@15
+brew install pspg
 
 # R
 brew install ripgrep
@@ -71,6 +80,7 @@ brew install rustup
 
 # S
 brew install starship
+brew install sqlc
 
 # T
 brew install tmux
