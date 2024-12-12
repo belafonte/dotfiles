@@ -8,7 +8,7 @@ Host *
 
 Host github.com
   HostName github.com
-  User belafonte
+  User git
   IdentityFile ~/.ssh/id_rsa
 
 Host *.byod.zhdk.ch
