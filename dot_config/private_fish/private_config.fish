@@ -9,9 +9,21 @@ set -x PGPORT 5415
 set -x XDG_CONFIG_HOME $HOME/.config
 set -x XDG_DATA_HOME $HOME/.local/share
 set -x XDG_CACHE_HOME $HOME/.cache
+set -x XDG_STATE_HOME $HOME/.local/state
 
 set -x CARGO_HOME $XDG_CACHE_HOME/cargo
 set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
+
+set -x ASDF_CONFIG_FILE $XDG_CONFIG_HOME/asdf/asdfrc
+set -x ASDF_DIR $XDG_CONFIG_HOME/asdf
+set -x ASDF_DATA_DIR $XDG_DATA_HOME/asdf
+
+set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/config
+set -x NPM_CONFIG_CACHE $XDG_CACHE_HOME/npm
+set -x NPM_CONFIG_TMP /tmp
+
+# set -x BW_SESSION $(bw login "pistor.jan@gmail.com" --raw)
+
 
 set -x DYLD_LIBRARY_PATH (brew --prefix)/lib
 set -gx GPG_TTY (tty)
@@ -20,6 +32,7 @@ set -gx GPG_TTY (tty)
 # fish_vi_key_bindings
 
 # aliases
+alias lg='lazygit'
 alias lll='eza --all --icons -l'
 alias llg='eza --all --icons -l --grid'
 alias llt='eza -TL 2'
@@ -45,11 +58,13 @@ abbr tn "tmux new -A -s (pwd | sed 's/.*\///g')"
 # abbr tn4 "tmux new -A -s (pwd | sed 's/.*\///g') \; \split-window -v \; \split-window -h \; \select-pane -t 1 \; \split-window -h"
 abbr su 'env TERM=xterm-256color su'
 abbr ssh 'env TERM=xterm-256color ssh'
+abbr cd 'z'
 
 ### leihs specific
 abbr dbdev 'DB_NAME=leihs_dev'
 abbr dbtest 'DB_NAME=leihs_test'
 abbr rrs "DB_NAME=leihs_test ./bin/rspec "
+abbr chezmoi "SHELL=fish chezmoi "
 
 function tn2
     set session_name (pwd | sed 's/.*\///g')
@@ -124,5 +139,4 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 
 starship init fish | source
-thefuck --alias | source
 zoxide init fish | source
