@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -eufo pipefail
+
 echo "Installing Apps"
 
 # Install App Store packages
@@ -21,9 +25,9 @@ mas install 1147396723
 # Install  Telegram
 mas install 747648890
 # Install  XCode
-mas install 497799835
-sudo xcodebuild -license accept
-sudo xcode-select --switch /Applications/Xcode.app
+#mas install 497799835
+#sudo xcodebuild -license accept
+#sudo xcode-select --switch /Applications/Xcode.app
 
 # Install  ifolor Designer 
 mas install 446366603
@@ -86,6 +90,7 @@ brew install --cask middleclick --no-quarantine
 brew install --cask miro
 brew install --cask monitorcontrol
 brew install --cask mouse-fix
+brew install --cask microsoft-outlook
 
 # N
 brew install --cask neovide
@@ -117,8 +122,8 @@ brew install --cask vivid
 brew install --cask visual-studio-code
 brew install --cask vlc
 
+# W
+brew install --cask whatsapp
+
 # Z
 brew install --cask zoom
-
-# add middle click to login items
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/MiddleClick.app", hidden:true}'
