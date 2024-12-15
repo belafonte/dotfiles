@@ -2,6 +2,7 @@
 
 set -eufo pipefail
 
+if [ -w /opt/homebrew ]; then
 echo "Installig Brew Packages"
 
 # Update any existing homebrew recipes
@@ -88,6 +89,7 @@ brew install zoxide
 
 # installing cargo and rust
 # rustup-init
+fi
 
 bw config server https://vault.bitwarden.eu
 bw login
