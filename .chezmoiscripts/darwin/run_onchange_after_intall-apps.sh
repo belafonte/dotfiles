@@ -55,8 +55,8 @@ mas install 1480933944
 #install Vinegar Tube Cleaner
 mas install 1591303229
 
-
-# Install cask packages
+if [ -w /opt/homebrew ]; then
+  # Install cask packages
 
 # A
 brew install --cask appcleaner
@@ -127,3 +127,5 @@ brew install --cask whatsapp
 
 # Z
 brew install --cask zoom
+
+fi
