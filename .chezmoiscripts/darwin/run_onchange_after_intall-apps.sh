@@ -56,76 +56,77 @@ mas install 1480933944
 mas install 1591303229
 
 if [ -w /opt/homebrew ]; then
-  # Install cask packages
+    # Install cask packages
 
-# A
-brew install --cask appcleaner
+  # A
+  brew install --cask appcleaner
 
-# B
-brew install --cask betterzip
-brew install --cask bitwarden
-brew install --cask blender
+  # B
+  brew install --cask betterzip
+  brew install --cask bitwarden
+  brew install --cask blender
 
-# C
-brew install --cask google-chrome
+  # C
+  brew install --cask google-chrome
 
-# D
-# brew install --cask drawio
+  # D
+  # brew install --cask drawio
 
-# E
-brew install --cask element
+  # E
+  brew install --cask element
 
-# F
-brew install --cask firefox
+  # F
+  brew install --cask firefox
 
-# K
-brew install --cask kap
-brew install --cask karabiner-elements
-brew install --cask kitty
+  # K
+  brew install --cask kap
+  brew install --cask karabiner-elements
+  brew install --cask kitty
 
-# M
-brew install --cask macvim
-brew install --cask microsoft-teams
-brew install --cask middleclick --no-quarantine
-brew install --cask miro
-brew install --cask monitorcontrol
-brew install --cask mouse-fix
-brew install --cask microsoft-outlook
+  # M
+  brew install --cask macvim
+  brew install --cask microsoft-teams
+  brew install --cask middleclick --no-quarantine
+  brew install --cask miro
+  brew install --cask monitorcontrol
+  brew install --cask mouse-fix
+  brew install --cask microsoft-outlook
 
-# N
-brew install --cask neovide
+  # N
+  brew install --cask neovide
 
-# O
-brew install --cask obsidian
+  # O
+  brew install --cask obsidian
 
-# P
-brew install --cask postman
+  # P
+  brew install --cask postman
 
-# Q
-brew install --cask qlmarkdown
-brew install --cask quicklook-json
+  # Q
+  brew install --cask qlmarkdown
+  brew install --cask quicklook-json
 
-# R
-brew install --cask rio
+  # R
+  brew install --cask rio
 
-# S
-brew install --cask signal
-brew install --cask spotify
-brew install --cask syntax-highlight
+  # S
+  brew install --cask signal
+  brew install --cask spotify
+  brew install --cask syntax-highlight
+  brew install --cask slack
 
-# T
-brew install --cask tableplus
-brew install --cask touchdesigner
 
-# V
-brew install --cask vivid
-brew install --cask visual-studio-code
-brew install --cask vlc
+  # T
+  brew install --cask tableplus
+  brew install --cask touchdesigner
 
-# W
-brew install --cask whatsapp
+  # V
+  brew install --cask vivid
+  brew install --cask visual-studio-code
+  brew install --cask vlc
 
-# Z
-brew install --cask zoom
+  # W
+  brew install --cask whatsapp
 
+  # Z
+  brew install --cask zoom
 fi
