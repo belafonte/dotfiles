@@ -15,7 +15,7 @@ set -x CARGO_HOME $XDG_CACHE_HOME/cargo
 set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
 
 set -x ASDF_CONFIG_FILE $XDG_CONFIG_HOME/asdf/asdfrc
-set -x ASDF_DIR $XDG_CONFIG_HOME/asdf
+# set -x ASDF_DIR $XDG_CONFIG_HOME/asdf
 set -x ASDF_DATA_DIR $XDG_DATA_HOME/asdf
 
 set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/config
@@ -65,6 +65,7 @@ abbr dbdev 'DB_NAME=leihs_dev'
 abbr dbtest 'DB_NAME=leihs_test'
 abbr rrs "DB_NAME=leihs_test ./bin/rspec "
 abbr chezmoi "SHELL=fish chezmoi "
+
 
 function tn2
     set session_name (pwd | sed 's/.*\///g')
@@ -136,7 +137,6 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
-
 
 starship init fish | source
 zoxide init fish | source
