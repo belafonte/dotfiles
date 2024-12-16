@@ -90,5 +90,13 @@ if [ -w /opt/homebrew ]; then
   # rustup-init
 fi
 
-bw config server https://vault.bitwarden.eu
-bw login
+json_str=$(bw status)
+
+# Check if 'status' is 'unauthenticated'
+if [[ $(echo "$json_str" | jq -r '.status') == "unauthenticated" ]]; then
+    echo "Bitwarden is unauthenticated."
+    bw config server https://vault.bitwarden.eu
+    bw login
+else
+    echo "Bitwarden alread set up"
+fi

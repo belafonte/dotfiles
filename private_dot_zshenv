@@ -1,6 +1,13 @@
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CACHE_HOME=$HOME/.cache
+
 export NEOVIM_BIN=/opt/homebrew/bin/nvim
 export NEOVIDE_NO_MULTIGRID=true
 export NEOVIDE_FRAME=transparent
 
 export NVIM_APPNAME=astronvim4
 export GIT_PAGER=delta
+
+source $XDG_DATA_HOME/plugins/java/set-java-home.fish

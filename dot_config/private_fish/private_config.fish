@@ -138,6 +138,6 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
-source $XDG_DATA_HOME/plugins/java/set-java-home.fish
+source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.fish
 starship init fish | source
 zoxide init fish | source
