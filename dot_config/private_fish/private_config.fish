@@ -139,10 +139,13 @@ fish_add_path /opt/homebrew/opt/postgresql@15/bin
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
 # bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+# set --export BUN_INSTALL "$HOME/.bun"
+# set --export PATH $BUN_INSTALL/bin $PATH
 
-source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.fish
+if asdf plugin-list | grep java
+    source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.fish
+end
+
 starship init fish | source
 zoxide init fish | source
 
