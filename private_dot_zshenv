@@ -10,4 +10,25 @@ export NEOVIDE_FRAME=transparent
 export NVIM_APPNAME=astronvim4
 export GIT_PAGER=delta
 
-source $XDG_DATA_HOME/plugins/java/set-java-home.fish
+export CARGO_HOME=$XDG_CACHE_HOME/cargo
+export RUSTUP_HOME=$XDG_DATA_HOME/rustup
+
+export ASDF_CONFIG_FILE=$XDG_CONFIG_HOME/asdf/asdfrc
+export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
+
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
+export NPM_CONFIG_TMP=/tmp
+
+source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.zsh
+
+
+# Remove $HOME/.asdf/shims from PATH if it exists
+export PATH=$(echo $PATH | tr ':' '\n' | grep -v "$HOME/.asdf/shims" | tr '\n' ':')
+
+# Prepend $HOME/.local/share/asdf/shims to PATH
+export PATH="$HOME/.local/share/asdf/shims:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval $(/opt/homebrew/bin/brew shellenv)
