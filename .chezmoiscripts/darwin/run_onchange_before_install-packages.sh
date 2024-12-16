@@ -71,6 +71,7 @@ if [ -w /opt/homebrew ]; then
   # S
   brew install starship
   brew install sqlc
+  brew install shared-mime-info
 
   # T
   brew install tmux
