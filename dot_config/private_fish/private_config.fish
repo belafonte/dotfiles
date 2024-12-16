@@ -15,15 +15,19 @@ set -x CARGO_HOME $XDG_CACHE_HOME/cargo
 set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
 
 set -x ASDF_CONFIG_FILE $XDG_CONFIG_HOME/asdf/asdfrc
-# set -x ASDF_DIR $XDG_CONFIG_HOME/asdf
 set -x ASDF_DATA_DIR $XDG_DATA_HOME/asdf
 
 set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/config
 set -x NPM_CONFIG_CACHE $XDG_CACHE_HOME/npm
 set -x NPM_CONFIG_TMP /tmp
 
-# set -x BW_SESSION $(bw login "pistor.jan@gmail.com" --raw)
 
+# Remove $HOME/.asdf/shims from PATH if it exists
+set PATH (string match -v "$HOME/.asdf/shims" $PATH)
+# Prepend $HOME/.local/share/asdf/shims to the PATH
+set -gx PATH $HOME/.local/share/asdf/shims $PATH
+
+# set -x BW_SESSION $(bw login "pistor.jan@gmail.com" --raw)
 
 set -x DYLD_LIBRARY_PATH (brew --prefix)/lib
 set -gx GPG_TTY (tty)
@@ -141,3 +145,8 @@ set --export PATH $BUN_INSTALL/bin $PATH
 source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.fish
 starship init fish | source
 zoxide init fish | source
+
+# Ensure PATH is consistent when running in tmux
+if not set -q TMUX
+    set -Ux PATH $HOME/bin $PATH
+end
