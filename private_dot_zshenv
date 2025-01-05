@@ -20,7 +20,9 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 export NPM_CONFIG_TMP=/tmp
 
-source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.zsh
+if asdf plugin-list | grep -q java; then
+  source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.zsh
+fi
 
 
 # Remove $HOME/.asdf/shims from PATH if it exists
