@@ -45,8 +45,11 @@ if [ -w /opt/homebrew ]; then
   brew install gnupg
   brew install gnu-sed
 
-  # K
+  # J
+  brew install jq
 
+  # K
+  
   # L
   brew install lazydocker
   brew install lazygit
