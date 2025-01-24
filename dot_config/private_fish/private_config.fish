@@ -142,7 +142,7 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 # set --export BUN_INSTALL "$HOME/.bun"
 # set --export PATH $BUN_INSTALL/bin $PATH
 
-if asdf plugin-list | grep java
+if asdf plugin-list | grep java > /dev/null
     source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.fish
 end
 
