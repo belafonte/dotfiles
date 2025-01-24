@@ -44,8 +44,6 @@ mas install 424390742
 mas install 824171161
 # install Affiniy Publisher
 mas install 881418622
-# # install Bitwarden
-# mas install 1352778147
 # install Blackmagic Speed Test
 mas install 425264550
 
