@@ -30,6 +30,7 @@ if [ -w /opt/homebrew ]; then
 
   # E
   brew install eza
+  brew install exiftool
 
   # F
   brew install ffmpeg
@@ -44,6 +45,9 @@ if [ -w /opt/homebrew ]; then
   brew install git-delta
   brew install gnupg
   brew install gnu-sed
+
+  #I
+  brew install imagemagick
 
   # J
   brew install jq
