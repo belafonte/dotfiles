@@ -1,4 +1,4 @@
-line-height = 1.6
+line-height = 1.0
 # Hide the cursor while typing
 #
 # Default is `false`
@@ -242,7 +242,7 @@ weight = 800
 #
 # Example:
 [navigation]
-mode = "BottomTab"
+mode = "Bookmark"
 clickable = true
 hide-if-single = true
 use-current-path = false
