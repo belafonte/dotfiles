@@ -61,7 +61,7 @@ if [ -w /opt/homebrew ]; then
 
   # B
   brew install --cask betterzip
-  brew install --cask bitwarden
+  # brew install --cask bitwarden
   brew install --cask blender
 
   # C
