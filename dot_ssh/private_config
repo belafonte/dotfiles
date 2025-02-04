@@ -40,8 +40,25 @@ Host test.leihs.zhdk.ch
 Host staging.leihs.zhdk.ch
   Hostname zhdk-leihs-staging.ruby.zhdk.ch
 
-Host *.madek.app *.leihs.app leihs.ffzh.ch leihs.uni-muster.ch portfoliodb.hslu.ch madek.hfg-karlsruhe.de
-  Port 2828
+# Madek 
+Host madek-gw.zhdk.ch
+  User root
+
+Host test.madek.zhdk.ch
+  ProxyJump madek-gw.zhdk.ch
+  Hostname zhdk-madek-test.ruby.zhdk.ch
+
+Host test-blank.madek.zhdk.ch
+  ProxyJump madek-gw.zhdk.ch
+  Hostname zhdk-madek-test-blank.ruby.zhdk.ch
+
+Host staging.madek.zhdk.ch
+  ProxyJump madek-gw.zhdk.ch
+  Hostname zhdk-madek-staging.ruby.zhdk.ch
+
+Host medienarchiv.zhdk.ch
+  ProxyJump madek-gw.zhdk.ch
+  Hostname zhdk-madek-prod.ruby.zhdk.ch
 
 Host ci-ax101-01
   Hostname 135.181.130.45
