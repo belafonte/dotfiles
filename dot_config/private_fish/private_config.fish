@@ -2,6 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+
+set -g fish_greeting ""
+
 set -x PGUSER jpistor
 set -x PGPORT 5415
 # set -x TERM xterm-256color
