@@ -72,6 +72,10 @@ abbr dbdev 'DB_NAME=leihs_dev'
 abbr dbtest 'DB_NAME=leihs_test'
 abbr rrs "DB_NAME=leihs_test ./bin/rspec "
 abbr chezmoi "SHELL=fish chezmoi "
+abbr testl 'DB_NAME=leihs_dev bin/rspec ./spec/'
+
+### madek specific
+abbr testm 'DB_NAME=madek_test bin/rspec ./spec/'
 
 
 function tn2
