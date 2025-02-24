@@ -130,6 +130,10 @@ return {
   -- },
 
   -- ----------------------------------------------
+  -- File Explorer
+  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
+
+  -- ----------------------------------------------
   -- Media
   -- { import = "astrocommunity.media.image-nvim" },
 
