@@ -52,6 +52,50 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufEnter" }, {
   end,
 })
 
+local function session_exists()
+  local cwd = vim.fn.getcwd()
+  local session_dir = os.getenv "XDG_DATA_HOME" .. "/astronvim4/dirsession"
+  local session_file = session_dir .. "/" .. cwd:gsub("/", "_") .. ".json"
+
+  local file = io.open(session_file, "r")
+  if file then
+    io.close(file)
+    return true
+  else
+    return false
+  end
+end
+
+-- vim.api.nvim_create_autocmd("User", {
+--   pattern = "VeryLazy",
+--   callback = function()
+--     if session_exists() then
+--       vim.g.alpha_disable = true
+--       require("resession").load(vim.fn.getcwd(), { dir = "dirsession" })
+--     end
+--   end,
+-- })
+-- Check and load session on startup
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   callback = function()
+--     if session_exists() then
+--       vim.g.alpha_disable = true
+--       require("resession").load(vim.fn.getcwd(), { dir = "dirsession" })
+--     end
+--
+--     -- local resession = require "resession"
+--     -- local current_session = resession.get_current()
+--     -- resession.load(vim.fn.getcwd(), { dir = "dirsession", silence_errors = true })
+--     -- if current_session then require("resession").load(vim.fn.getcwd(), { dir = "dirsession" }) end
+--   end,
+-- })
+
+-- Save session on save
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*",
+  callback = function() require("resession").save(vim.fn.getcwd(), { dir = "dirsession", notify = false }) end,
+})
+
 local function set_scroll_off()
   -- local height = vim.api.nvim_win_get_height(0)
   vim.o.scrolloff = 9999
