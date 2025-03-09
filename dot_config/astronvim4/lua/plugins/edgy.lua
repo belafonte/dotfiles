@@ -55,6 +55,7 @@ return {
             return vim.api.nvim_win_get_config(win).relative ~= "win" and vim.b[buf].neo_tree_source == "git_status"
           end,
           open = "Neotree position=right git_status",
+          size = { width = 40 },
         },
         {
           title = "Buffers",
@@ -63,6 +64,7 @@ return {
             return vim.api.nvim_win_get_config(win).relative ~= "win" and vim.b[buf].neo_tree_source == "buffers"
           end,
           open = "Neotree position=top buffers",
+          size = { width = 40 },
         },
       },
       right = {
