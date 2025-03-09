@@ -125,7 +125,10 @@ return {
           end,
           desc = "Switch Buffers",
         },
-        -- ["<leader>fe"] = { "<cmd>Telescope file_browser<cr>", desc = "File explorer" },
+
+        ["<leader>ftl"] = { "<cmd>Neotree filesystem reveal toggle left<CR>", desc = "File explorer Left" },
+        ["<leader>ftf"] = { "<cmd>Neotree filesystem reveal toggle float<CR>", desc = "File explorer Float" },
+
         ["<Leader>fp"] = { function() require("telescope").extensions.projects.projects {} end, desc = "Find projects" },
       },
       t = {

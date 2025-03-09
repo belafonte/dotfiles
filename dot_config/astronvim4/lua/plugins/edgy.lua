@@ -42,26 +42,28 @@ return {
         {
           title = "Files",
           ft = "neo-tree",
-          filter = function(buf) return vim.b[buf].neo_tree_source == "filesystem" end,
-          pinned = true,
-          open = "Neotree position=left filesystem",
-          size = { height = 0.5 },
+          filter = function(buf, win)
+            return vim.b[buf].neo_tree_source == "filesystem" and vim.api.nvim_win_get_config(win).relative == ""
+          end,
+          -- Neo-tree filesystem always takes half the screen height
+          size = { height = 0.5, width = 40 },
         },
         {
           title = "Git Status",
           ft = "neo-tree",
-          filter = function(buf) return vim.b[buf].neo_tree_source == "git_status" end,
-          pinned = true,
+          filter = function(buf, win)
+            return vim.api.nvim_win_get_config(win).relative ~= "win" and vim.b[buf].neo_tree_source == "git_status"
+          end,
           open = "Neotree position=right git_status",
         },
         {
           title = "Buffers",
           ft = "neo-tree",
-          filter = function(buf) return vim.b[buf].neo_tree_source == "buffers" end,
-          pinned = true,
+          filter = function(buf, win)
+            return vim.api.nvim_win_get_config(win).relative ~= "win" and vim.b[buf].neo_tree_source == "buffers"
+          end,
           open = "Neotree position=top buffers",
         },
-        "neo-tree",
       },
       right = {
         { title = "Grug Far", ft = "grug-far", size = { width = 0.4 } },
