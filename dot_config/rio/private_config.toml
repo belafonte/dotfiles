@@ -1,4 +1,6 @@
 line-height = 1.0
+option-as-alt = 'left'
+
 # Hide the cursor while typing
 #
 # Default is `false`
@@ -55,7 +57,8 @@ dark = "everforest-dark-medium"
 # Possible choices: 'both', 'left' and 'right'.
 #
 # Example:
-option-as-alt = 'left'
+
+
 
 # Line height
 #
@@ -242,11 +245,12 @@ weight = 800
 #
 # Example:
 [navigation]
-mode = "NativeTab"
+mode = "Plain"
 clickable = true
 hide-if-single = true
 use-current-path = false
 color-automation = []
+
 
 # Shell
 #
