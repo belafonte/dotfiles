@@ -7,3 +7,6 @@ export PATH="/usr/sbin:$PATH"
 . "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/jpistor/.lmstudio/bin"
