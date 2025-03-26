@@ -27,7 +27,7 @@ $git_status\
 $line_break\
 $character"""
 
-add_newline = false
+add_newline = true
 palette = "everforest"
 
 [os]
