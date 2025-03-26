@@ -24,7 +24,6 @@ if asdf plugin-list | grep -q java; then
   source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.zsh
 fi
 
-
 # Remove $HOME/.asdf/shims from PATH if it exists
 export PATH=$(echo $PATH | tr ':' '\n' | grep -v "$HOME/.asdf/shims" | tr '\n' ':')
 
