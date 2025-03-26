@@ -8,3 +8,6 @@ cursor-style=block
 macos-option-as-alt=left
 command=/opt/homebrew/bin/fish
 theme =dark:everforest-dark-medium,light:everforest-light-medium
+macos-icon=official
+macos-titlebar-style=hidden
+macos-titlebar-proxy-icon=hidden
