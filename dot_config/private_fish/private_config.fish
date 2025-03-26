@@ -23,6 +23,7 @@ set -x ASDF_DATA_DIR $XDG_DATA_HOME/asdf
 set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/config
 set -x NPM_CONFIG_CACHE $XDG_CACHE_HOME/npm
 set -x NPM_CONFIG_TMP /tmp
+set -x PSQLRC $HOME/.config/postgresql/psqlrc
 
 
 # Remove $HOME/.asdf/shims from PATH if it exists
@@ -71,11 +72,11 @@ abbr cd 'z'
 abbr dbdev 'DB_NAME=leihs_dev'
 abbr dbtest 'DB_NAME=leihs_test'
 abbr rrs "DB_NAME=leihs_test ./bin/rspec "
-abbr chezmoi "SHELL=fish chezmoi "
-abbr testl 'DB_NAME=leihs_dev bin/rspec ./spec/'
+abbr chezmoi "SHELL=fish chezmoi"
+abbr --set-cursor testl "DB_NAME=leihs_dev bin/rspec ./spec/%"
 
 ### madek specific
-abbr testm 'DB_NAME=madek_test bin/rspec ./spec/'
+abbr --set-cursor testm 'DB_NAME=madek_test bin/rspec ./spec/%'
 
 
 function tn2
@@ -160,3 +161,6 @@ zoxide init fish | source
 if not set -q TMUX
     set -Ux PATH $HOME/bin $PATH
 end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/jpistor/.lmstudio/bin
