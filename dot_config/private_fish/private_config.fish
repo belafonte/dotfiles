@@ -44,16 +44,8 @@ alias lg='lazygit'
 alias lll='eza --all --icons -l'
 alias llg='eza --all --icons -l --grid'
 alias llt='eza -TL 2'
-alias launch-windows="launch_kitty_windows"
-alias oldastro="NVIM_APPNAME=astrovim nvim"
 alias lazy="NVIM_APPNAME=lazyvim nvim"
-alias neo="NVIM_APPNAME=astronvim4 nvim"
-alias cdt="cd -"
-alias kssh="kitty +kitten ssh"
-alias crepl="clj -Sdeps '{:deps {nrepl/nrepl {:mvn/version \"1.0.0\"} cider/cider-nrepl {:mvn/version \"0.42.1\"}}}' \
-    --main nrepl.cmdline \
-    --middleware '[\"cider.nrepl/cider-middleware\"]' \
-    --interactive"
+alias neo="NVIM_APPNAME=astronvim5 nvim"
 
 alias tp="tmux new -A -s (pwd | sed 's/.*\///g')"
 
