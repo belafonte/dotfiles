@@ -1,0 +1,5 @@
+\set AUTOCOMMIT on
+\timing ON
+\pset border 1
+\x ON
+\f description "\r"
