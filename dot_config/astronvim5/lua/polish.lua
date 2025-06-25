@@ -16,18 +16,10 @@
 -- }
 
 if vim.g.neovide then
-  vim.g.neovide_input_macos_option_key_is_meta = "only_left"
   vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
   vim.keymap.set("v", "<D-c>", '"+y') -- Copy
   vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
   vim.keymap.set("v", "<D-v>", '"+P') -- Paste visual mode
-
-  vim.g.neovide_floating_shadow = false
-  vim.g.neovide_floating_z_height = 10
-  vim.g.neovide_light_angle_degrees = 45
-  vim.g.neovide_light_radius = 5
-  -- vim.keymap.set("c", "<D-v>", "<C-R>+") -- Paste command mode
-  -- vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
 
 -- Allow clipboard copy paste in neovim
@@ -48,47 +40,11 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufEnter" }, {
   callback = function()
-    if vim.bo.filetype ~= "neo-tree" and vim.bo.filetype ~= "alpha" then require("astrocore.buffer").sort "bufnr" end
+    if vim.bo.filetype ~= "neo-tree" and vim.bo.filetype ~= "snacks" then
+      require("astrocore.buffer").sort(tostring(vim.fn.bufnr()))
+    end
   end,
 })
-
-local function session_exists()
-  local cwd = vim.fn.getcwd()
-  local session_dir = os.getenv "XDG_DATA_HOME" .. "/astronvim4/dirsession"
-  local session_file = session_dir .. "/" .. cwd:gsub("/", "_") .. ".json"
-
-  local file = io.open(session_file, "r")
-  if file then
-    io.close(file)
-    return true
-  else
-    return false
-  end
-end
-
--- vim.api.nvim_create_autocmd("User", {
---   pattern = "VeryLazy",
---   callback = function()
---     if session_exists() then
---       vim.g.alpha_disable = true
---       require("resession").load(vim.fn.getcwd(), { dir = "dirsession" })
---     end
---   end,
--- })
--- Check and load session on startup
--- vim.api.nvim_create_autocmd("VimEnter", {
---   callback = function()
---     if session_exists() then
---       vim.g.alpha_disable = true
---       require("resession").load(vim.fn.getcwd(), { dir = "dirsession" })
---     end
---
---     -- local resession = require "resession"
---     -- local current_session = resession.get_current()
---     -- resession.load(vim.fn.getcwd(), { dir = "dirsession", silence_errors = true })
---     -- if current_session then require("resession").load(vim.fn.getcwd(), { dir = "dirsession" }) end
---   end,
--- })
 
 -- Save session on save
 vim.api.nvim_create_autocmd("BufWritePost", {

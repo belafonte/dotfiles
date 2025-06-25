@@ -30,7 +30,6 @@ return {
       "http",
       "jq",
       "make",
-      "org",
       "python",
       "r",
       "sql",

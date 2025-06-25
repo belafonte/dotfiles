@@ -7,7 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.recipes.vscode-icons" },
   { import = "astrocommunity.recipes.neovide" },
-  { import = "astrocommunity.recipes.telescope-lsp-mappings" },
+  -- { import = "astrocommunity.recipes.telescope-lsp-mappings" },
 
   -- ----------------------------------------------
   -- Diagnostics
@@ -57,13 +57,11 @@ return {
   { import = "astrocommunity.colorscheme.everforest" },
 
   -- ----------------------------------------------
-  -- color picker and highlighter
-  { import = "astrocommunity.color.ccc-nvim" },
 
   -- ----------------------------------------------
   -- indent
   -- { import = "astrocommunity.indent.mini-indentscope" },
-  { import = "astrocommunity.indent.indent-blankline-nvim" },
+  -- { import = "astrocommunity.indent.indent-blankline-nvim" },
 
   -- ----------------------------------------------
   -- Motion plugins
@@ -77,31 +75,6 @@ return {
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-
-  -- { import = "astrocommunity.editing-support.chatgpt-nvim" },
-  -- { -- further customize the options set by the community
-  --   "jackMort/ChatGPT.nvim",
-  --   opts = {
-  --     openai_params = {
-  --       model = "gpt-4",
-  --       frequency_penalty = 0,
-  --       presence_penalty = 0,
-  --       max_tokens = 3000,
-  --       temperature = 0,
-  --       top_p = 1,
-  --       n = 1,
-  --     },
-  --     openai_edit_params = {
-  --       model = "gpt-4",
-  --       frequency_penalty = 0,
-  --       presence_penalty = 0,
-  --       temperature = 0,
-  --       top_p = 1,
-  --       n = 1,
-  --     },
-  --   },
-  -- },
-
   -- { import = "astrocommunity.editing-support.multicursors-nvim" },
 
   {
@@ -155,6 +128,7 @@ return {
   -- Treesitter: clojure , Lsp: clojure-lsp, Lint/format:
   { import = "astrocommunity.pack.clojure" },
   { "gpanders/nvim-parinfer", enabled = false },
+  { "dundalek/parpar.nvim", enabled = false },
   -- Treesitter: dockerfile , Lsp: dockerls & docker_compose_language_service, Lint/format: hadolint
   { import = "astrocommunity.pack.docker" },
   -- Treesitter: json & jsonc, Lsp: jsonls, Lint/format: stylua
@@ -235,7 +209,6 @@ return {
 
   -- Indent
   -- ----------------------------------------------
-  { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.indent.mini-indentscope" },
 
   -- ----------------------------------------------
