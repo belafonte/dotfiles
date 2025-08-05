@@ -196,7 +196,7 @@
                             {
                                 "description": "toggle lights",
                                 "from": {
-                                    "key_code": "home",
+                                    "key_code": "end",
                                     "modifiers": { "mandatory": [] }
                                 },
                                 "to": [{ "shell_command": "shortcuts run 'Arbeitslicht'" }],
@@ -3053,7 +3053,21 @@
                         "product_id": 12292,
                         "vendor_id": 14000
                     },
-                    "ignore": false
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "page_down" },
+                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
