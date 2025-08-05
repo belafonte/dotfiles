@@ -40,7 +40,6 @@ return {
       },
     },
   },
-  -- { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
 
   -- ----------------------------------------------
   -- Code Runnners
@@ -50,18 +49,9 @@ return {
     ft = { "clojure", "janet", "fennel", "racket", "hy", "scheme", "guile", "julia", "lua", "lisp", "python" },
   },
 
-  -- { import = "astrocommunity.bars-and-lines.scope-nvim" },
-
   -- ----------------------------------------------
   -- colorchemes
   { import = "astrocommunity.colorscheme.everforest" },
-
-  -- ----------------------------------------------
-
-  -- ----------------------------------------------
-  -- indent
-  -- { import = "astrocommunity.indent.mini-indentscope" },
-  -- { import = "astrocommunity.indent.indent-blankline-nvim" },
 
   -- ----------------------------------------------
   -- Motion plugins
@@ -161,7 +151,7 @@ return {
 
   -- ----------------------------------------------
   -- Project
-  { import = "astrocommunity.project.project-nvim" }, -- switch between projects
+  -- { import = "astrocommunity.project.project-nvim" }, -- switch between projects
 
   -- ----------------------------------------------
   -- Programing Language support
