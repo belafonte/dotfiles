@@ -7,28 +7,33 @@ export NEOVIM_BIN=/opt/homebrew/bin/nvim
 export NEOVIDE_NO_MULTIGRID=true
 export NEOVIDE_FRAME=transparent
 
-export NVIM_APPNAME=astronvim4
+export NVIM_APPNAME=astronvim5
 export GIT_PAGER=delta
 
 export CARGO_HOME=$XDG_CACHE_HOME/cargo
 export RUSTUP_HOME=$XDG_DATA_HOME/rustup
 
-export ASDF_CONFIG_FILE=$XDG_CONFIG_HOME/asdf/asdfrc
-export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
+# export ASDF_CONFIG_FILE=$XDG_CONFIG_HOME/asdf/asdfrc
+# export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
 
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 export NPM_CONFIG_TMP=/tmp
 
-if asdf plugin-list | grep -q java; then
-  source $XDG_DATA_HOME/asdf/plugins/java/set-java-home.zsh
+if command -v asdf >/dev/null 2>&1; then
+  if asdf plugin-list | grep -q java; then
+    source "$XDG_DATA_HOME/asdf/plugins/java/set-java-home.zsh"
+  fi
 fi
 
 # Remove $HOME/.asdf/shims from PATH if it exists
-export PATH=$(echo $PATH | tr ':' '\n' | grep -v "$HOME/.asdf/shims" | tr '\n' ':')
+# export PATH=$(echo $PATH | tr ':' '\n' | grep -v "$HOME/.local/share/asdf/shims" | tr '\n' ':')
 
 # Prepend $HOME/.local/share/asdf/shims to PATH
-export PATH="$HOME/.local/share/asdf/shims:$PATH"
+# if [ -d "$HOME/.local/share/asdf" ]; then
+#   export PATH="$HOME/.local/share/asdf/shims:$PATH"
+# fi
+# export PATH="$HOME/.local/share/asdf/shims:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
