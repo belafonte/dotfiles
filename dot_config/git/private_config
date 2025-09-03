@@ -41,4 +41,4 @@
     rohm = "!git reset --hard origin/master"
 
 [commit]
-    ; gpgSign = true
+    gpgSign = true
